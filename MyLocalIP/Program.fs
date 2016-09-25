@@ -18,8 +18,6 @@ let myLocalIP = try
 
 [<EntryPoint>]
 let main argv =
-    //printfn "saved IP: %s" savedIP
-    //printfn "Local IP: %A" myLocalIP
     if savedIP <> myLocalIP
     then
         try
