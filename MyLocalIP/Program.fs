@@ -25,6 +25,8 @@ let main argv =
             stream.WriteLine(myLocalIP)
             stream.Flush()
             stream.Close()
-        with
-            | ex -> ()
-    0 // Return an integer exit code
+            0
+        with  // catch all exceptions
+            | ex -> 1 // Non-zero return status of main indicates that an error has occurred.
+    else
+        0 // Zero return status of main indicates that no error has occurred.
